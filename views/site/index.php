@@ -43,7 +43,7 @@ $this->title = 'MyHomeLib';
                                         <p class="card-text"><?=mb_substr($book->description,0,100,'UTF-8').'...'?></p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">More</a>
+                                        <a href="<?=\Yii::$app->request->BaseUrl?>/book/<?=$book->id?>" class="btn btn-primary">More</a>
                                     </div>
                                 </div>
                             </div>

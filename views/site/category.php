@@ -40,10 +40,11 @@ $this->title = Html::encode($currentCategory->name);
                                     <img class="card-image" src="<?=\Yii::$app->request->BaseUrl?>/uploads/images/<?=$book->image?>" alt="<?=$book->name?>">
                                     <div class="card-body">
                                         <h4 class="card-title"><?=$book->name?></h4>
+                                        <p class="card-author"><?=$book->author?></p>
                                         <p class="card-text"><?=mb_substr($book->description,0,100,'UTF-8').'...'?></p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary">More</a>
+                                        <a href="<?=\Yii::$app->request->BaseUrl?>/book/<?=$book->id?>" class="btn btn-primary">More</a>
                                     </div>
                                 </div>
                             </div>

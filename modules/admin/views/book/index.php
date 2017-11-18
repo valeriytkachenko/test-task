@@ -27,7 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'author',
-            'category_id',
+            [
+                'attribute' => 'category_id',
+                'value' => 'category.name',
+            ],
             'description:ntext',
             // 'pages',
             // 'availability',

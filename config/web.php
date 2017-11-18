@@ -50,6 +50,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'category/<id:\d+>' => 'site/category',
+                'book/<id:\d+>' => 'site/book',
                 '' => 'site/index',
             ],
         ],

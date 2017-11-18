@@ -95,6 +95,26 @@ class SiteController extends Controller
             'currentCategory' => $currentCategory,
             ]);
     }
+
+    /**
+    * Display one book
+    */
+    public function actionBook($id)
+    {
+        //if exists
+        if($book = Book::find()->Where(['id' => $id])->one())
+        {   
+           return $this->render('book', [
+            'book' => $book,
+            ]);
+        }
+        else
+        {
+            throw new NotFoundHttpException('This entry does not exist!');
+        }
+        
+
+    }
  
     /**
     * Authorization

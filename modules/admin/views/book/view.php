@@ -37,7 +37,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'description:ntext',
             'pages',
-            'availability',
+            [
+                'attribute' => 'availability',
+                'value' =>  $model->getAvailabilityText(),
+            ],
             'image',
         ],
     ]) ?>

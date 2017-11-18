@@ -23,8 +23,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'pages')->textInput() ?>
 
     <?= $form->field($model, 'availability')->dropDownList([
-        1 => 'at home',
-        0 => 'given away',
+        1 => 'At home',
+        0 => 'Given away',
     ]);?>
 
     <?= $form->field($model, 'image')->fileInput(); ?>

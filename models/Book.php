@@ -70,7 +70,20 @@ class Book extends \yii\db\ActiveRecord
 	{
 		return $this->hasOne(Category::className(), ['id' => 'category_id']);
 	}
-
+	/**
+	 * Returns availability information in a readeble format
+	 */
+	public function getAvailabilityText()
+    {
+        switch ($this->availability) {
+            case '1':
+                return 'At home';
+                break;
+            case '0':
+                return 'Given away';
+                break;
+        }
+    }
 	/**
 	 * Uploads image to server before saving book
 	 */
